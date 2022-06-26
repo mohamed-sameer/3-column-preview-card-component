@@ -34,7 +34,9 @@ body {
 .card-col-text {
   margin-bottom: 50px;
 }
-.col h1 {
+.col h1,
+.col h2,
+.col h3 {
   text-transform: uppercase;
   font-family: 'Big Shoulders Display', cursive;
   font-weight: 700;
