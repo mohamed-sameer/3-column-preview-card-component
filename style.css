@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ===================== */
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsl(0, 0%, 95%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* ===================== */
+.card {
+  max-width: 870px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin: 20px;
+}
+.col {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-col-text {
+  margin-bottom: 50px;
+}
+.col h1 {
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+.col p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.col:first-child {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.col:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+.col:last-child {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.card-col-cta {
+  margin-top: auto;
+  /* margin-top: 50px; */
+  transition: all 1.3s;
+}
+.card-col-cta a {
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 100px;
+  text-transform: capitalize;
+  background-color: hsl(0, 0%, 95%);
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.col:first-child .card-col-cta a {
+  color: hsl(31, 77%, 52%);
+}
+.col:nth-child(2) .card-col-cta a {
+  color: hsl(184, 100%, 22%);
+}
+.col:last-child .card-col-cta a {
+  color: hsl(179, 100%, 13%);
+}
+.col .card-col-cta a:hover {
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 2px hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+}
+/* ===================== */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #333;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ===================== */
+@media (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  .card {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  .col:first-child {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+  .col:last-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+  }
+}
